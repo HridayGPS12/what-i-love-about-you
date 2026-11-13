@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f3ec">
+  <meta name="theme-color" content="#fff5f7">
   <meta name="description" content="A love letter to my wife: 108 little reasons I love her, and a thousand more that words could never hold.">
   <meta name="robots" content="noindex, nofollow">
   <title>My Beloved, My Devi — A Love Letter</title>
@@ -198,6 +198,126 @@
     .memory-photo .caption-number{flex:0 0 auto;color:var(--rose);font:700 9px var(--sans);letter-spacing:.14em}
     .memory-photo figcaption strong{color:var(--wine);font:600 13px/1.2 var(--serif);text-align:right}
     @media(max-width:640px){.hero-photo .photo-caption{padding:6px 6px}.hero-photo .photo-caption strong{font-size:9px}.hero-photo .photo-caption small{font-size:8px}.memory-photo img{min-height:0;height:auto;aspect-ratio:1/1.2;max-height:220px}.memory-photo figcaption{padding:8px}.memory-photo figcaption strong{font-size:11px}}
+
+  
+    /* Rose-petal and berry refresh */
+    :root{--paper:#fff5f7;--paper-deep:#f3dce5;--ink:#3a1d2d;--muted:#765b6b;--wine:#8f3158;--rose:#d77997;--rose-pale:#f7dfe7;--gold:#bd9257;--line:rgba(143,49,88,.17);--shadow:0 24px 64px rgba(97,39,65,.14)}
+    body{background:var(--paper)}
+    body:before{background:radial-gradient(ellipse at 12% 4%,rgba(241,183,198,.38),transparent 31%),radial-gradient(ellipse at 88% 29%,rgba(228,183,193,.24),transparent 32%),radial-gradient(ellipse at 45% 94%,rgba(255,226,231,.65),transparent 34%)}
+    .topbar{background:rgba(255,245,247,.94);border-bottom-color:rgba(143,49,88,.15)}
+    .brand-mark{background:linear-gradient(145deg,#d7839b,#913354);box-shadow:0 8px 20px rgba(143,49,88,.22)}
+    .brand strong{color:#4a2537}
+    .music-button{background:#fffafd;border-color:rgba(143,49,88,.2);white-space:nowrap}
+    .button-primary{background:linear-gradient(135deg,#a23a62,#81294e);border-color:#8f3158;box-shadow:0 10px 24px rgba(143,49,88,.2)}
+    .button-soft{background:rgba(255,255,255,.52)}
+    .hero{width:min(1180px,calc(100% - 44px));margin:28px auto 38px;padding:65px 50px 66px;min-height:630px;gap:34px;border:1px solid rgba(143,49,88,.13);border-radius:38px;background:linear-gradient(112deg,rgba(255,226,233,.78),rgba(255,249,248,.9) 51%,rgba(255,241,244,.74));box-shadow:0 20px 56px rgba(143,49,88,.08);overflow:hidden}
+    .hero:before{content:"";position:absolute;width:300px;height:300px;right:43%;top:-216px;border:1px solid rgba(143,49,88,.12);border-radius:50%;box-shadow:0 0 0 25px rgba(255,255,255,.12),0 0 0 50px rgba(255,255,255,.08);pointer-events:none}
+    .hero-copy{padding:10px 0}
+    .hero h1{color:#331927}
+    .hero h1 em{color:#9a365e}
+    .eyebrow{color:#973858}
+    .hero-art{background:radial-gradient(ellipse,rgba(229,162,178,.25),rgba(255,245,247,0) 70%)}
+    .hero-halo{border-color:rgba(189,146,87,.62)}
+    .hero-photo{border-color:#fffdfd;box-shadow:0 22px 46px rgba(69,31,50,.2)}
+    .hero-seal{background:linear-gradient(145deg,#b45072,#772545);border:1px solid rgba(255,239,243,.5);box-shadow:0 18px 36px rgba(97,32,61,.28)}
+    .intro-strip{background:rgba(255,255,255,.64);border-color:rgba(143,49,88,.13);box-shadow:0 9px 25px rgba(143,49,88,.045)}
+    .intro-strip strong{color:#8f3158}
+    .section-head h2{color:#3a1d2d}
+    .section-head h2 em{color:#a94468!important}
+    .reason-controls{background:rgba(255,255,255,.68);border-color:rgba(143,49,88,.13);box-shadow:0 12px 28px rgba(143,49,88,.055)}
+    .filter{background:#fffafd;border-color:rgba(143,49,88,.15);color:#765b6b}
+    .filter:hover,.filter[aria-pressed=true]{background:linear-gradient(130deg,#a74468,#81294e);border-color:#8f3158;color:#fff}
+    .reason-grid{gap:14px}
+    .reason-card{min-height:152px;padding:20px 19px 19px;border:1px solid rgba(143,49,88,.13);border-radius:17px;background:linear-gradient(145deg,#fffefe,#fff8fa);box-shadow:0 9px 22px rgba(97,39,65,.055)}
+    .reason-card:nth-child(4n+1){background:linear-gradient(145deg,#fff7f8,#fbeaf0)}
+    .reason-card:nth-child(4n+3){border-radius:17px}
+    .reason-card:after{border-color:rgba(215,121,151,.2)}
+    .reason-number{display:inline-flex;min-width:30px;justify-content:center;padding:3px 7px;margin-bottom:10px;border-radius:999px;background:#fbe8ee;color:#a44b68;font-size:11px}
+    .reason-card p{font:500 16px/1.52 var(--serif);color:#382333}
+    .memory-photo{border-radius:14px;background:#fff;border:1px solid rgba(143,49,88,.1);box-shadow:0 14px 28px rgba(97,39,65,.13)}
+    .memory-photo figcaption strong{color:#8f3158}
+    .memory-photo .caption-number{color:#c56783}
+    .devotional{background:radial-gradient(ellipse at 78% 24%,rgba(237,153,174,.24),transparent 38%),linear-gradient(128deg,#64243f,#8e3158 56%,#6d2747)}
+    .devotional:before,.devotional:after{border-color:rgba(255,225,232,.2)}
+    .devotional .eyebrow{color:#ffdce5!important}
+    .closing h2 em{color:#a13b61}
+    .closing-heart{color:#cb6383}
+    .count-pill{background:rgba(255,255,255,.65);border-color:rgba(143,49,88,.15)}
+    footer{background:#f9e9ee;border-top-color:rgba(143,49,88,.14);color:#7b5968}
+    .hero-photo .photo-caption{background:#fffafb}
+    .hero-photo .photo-caption strong{color:#8f3158}
+    .hero-photo .photo-caption small{color:#ce718d}
+    .photo-caption.dark{background:#fffafb}
+    :focus-visible{outline:3px solid rgba(215,121,151,.72);outline-offset:3px}
+    @media(max-width:850px){
+      .hero{padding:44px 30px 48px;gap:16px;min-height:565px}
+      .hero-art{transform:scale(.88);transform-origin:center}
+      .reason-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media(max-width:640px){
+      .wrap{width:calc(100% - 30px)}
+      .topbar-inner{min-height:62px;gap:8px}
+      .brand{gap:8px}
+      .brand-mark{width:38px;height:38px;border-radius:13px}
+      .brand strong{font-size:9px;letter-spacing:.08em;white-space:nowrap}
+      .brand small,.nav{display:none}
+      .music-button{min-height:40px;padding:0 10px;font-size:10px}
+      .music-button span{white-space:nowrap}
+      .hero{width:calc(100% - 18px);margin:12px auto 24px;padding:30px 17px 0;display:flex;flex-direction:column;align-items:stretch;gap:2px;min-height:0;border-radius:26px}
+      .hero:before{width:190px;height:190px;right:-65px;top:-130px}
+      .hero-copy{padding:0}
+      .hero h1{font-size:clamp(46px,13vw,66px);line-height:1.02;margin:14px 0}
+      .hero-lede{font-size:13px;line-height:1.72;margin-bottom:16px}
+      #randomTop{display:none}
+      .hero-actions{margin-bottom:3px}
+      .hero-note{margin-top:14px}
+      .hero-art{height:340px;width:100%;max-width:420px;transform:scale(.93);transform-origin:top center;margin:0 auto -18px}
+      .hero-halo{width:320px;height:320px;top:12px}
+      .hero-photo-main{width:224px;height:300px;top:42px;left:calc(50% - 112px)}
+      .hero-photo-side{width:119px;height:145px;right:1px;top:21px}
+      .hero-photo-small{width:116px;height:140px;left:1px;bottom:12px}
+      .hero-seal{width:70px;height:70px;font-size:10px;right:1px;bottom:3px}
+      .hero-photo .photo-caption{padding:6px 6px}
+      .hero-photo .photo-caption strong{font-size:9px;white-space:normal}
+      .hero-photo .photo-caption small{font-size:8px}
+      .hero-photo-side .photo-caption{gap:3px}
+      .hero-photo-side .photo-caption strong{font-size:8px}
+      .intro-strip{width:calc(100% - 30px);padding:12px 14px;border-radius:14px;gap:8px;font-size:9px}
+      .intro-strip strong{font-size:14px}
+      .section{padding:63px 0}
+      .section-head h2{font-size:clamp(36px,10vw,45px)}
+      .section-head p{font-size:12px}
+      .reason-controls{padding:11px;border-radius:15px;gap:10px}
+      .filters{gap:6px}
+      .filter{min-height:37px;padding:7px 10px;font-size:9px}
+      .shuffle-button{width:100%;font-size:11px}
+      .reason-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+      .reason-card{min-height:152px;padding:15px 12px;border-radius:13px}
+      .reason-card p{font-size:13px;line-height:1.48}
+      .reason-number{margin-bottom:8px}
+      .memory-photo{border-radius:11px}
+      .memory-photo img{aspect-ratio:1/1.2;max-height:210px}
+      .memory-photo figcaption{padding:8px 7px;gap:5px}
+      .memory-photo .caption-number{font-size:8px}
+      .memory-photo figcaption strong{font-size:10px}
+      .devotional{margin:0 8px;padding:58px 0;border-radius:26px}
+      .devotional-inner{grid-template-columns:1fr;gap:21px}
+      .devi-mark{font-size:42px}
+      .devotional h2{font-size:39px}
+      .devotional p{font-size:13px}
+      .devotional-quote{font-size:16px;padding-left:17px}
+      .closing{padding:70px 0}
+      .closing h2{font-size:clamp(39px,11vw,54px)}
+      .closing p{font-size:20px}
+    }
+    @media(max-width:390px){
+      .wrap{width:calc(100% - 28px)}
+      .hero{width:calc(100% - 16px);padding-inline:15px}
+      .hero-art{transform:scale(.93);margin-bottom:-16px}
+      .reason-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .reason-card{min-height:160px}
+    }
+    @media(max-width:320px){.reason-grid{grid-template-columns:1fr}}
 
   </style>
 </head>
@@ -519,4 +639,6 @@
   </script>
 </body>
 </html>
+
+
 
