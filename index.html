@@ -185,6 +185,20 @@
       .closing{padding:78px 0}
     }
 
+  
+    .hero-photo .photo-caption{bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;gap:5px;padding:8px 10px;background:#fffdf9;color:var(--wine);text-align:left}
+    .hero-photo .photo-caption small{flex:0 0 auto;color:var(--rose);font:700 9px var(--sans);letter-spacing:.12em}
+    .hero-photo .photo-caption strong{font:600 11px/1.2 var(--serif);white-space:nowrap}
+    .hero-photo-side .photo-caption{padding:6px 7px}
+    .hero-photo-side .photo-caption strong{font-size:9px}
+    .hero-photo-small .photo-caption strong{font-size:9px}
+    .memory-photo{display:flex;flex-direction:column;min-height:0;padding:0;background:#fffdf9;border-radius:5px 16px 5px 16px}
+    .memory-photo img{width:100%;height:auto;min-height:0;aspect-ratio:1/1.12;max-height:300px;object-fit:cover}
+    .memory-photo figcaption{position:static;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px}
+    .memory-photo .caption-number{flex:0 0 auto;color:var(--rose);font:700 9px var(--sans);letter-spacing:.14em}
+    .memory-photo figcaption strong{color:var(--wine);font:600 13px/1.2 var(--serif);text-align:right}
+    @media(max-width:640px){.hero-photo .photo-caption{padding:6px 6px}.hero-photo .photo-caption strong{font-size:9px}.hero-photo .photo-caption small{font-size:8px}.memory-photo img{min-height:0;height:auto;aspect-ratio:1/1.2;max-height:220px}.memory-photo figcaption{padding:8px}.memory-photo figcaption strong{font-size:11px}}
+
   </style>
 </head>
 <body>
@@ -220,10 +234,10 @@
         <div class="hero-halo" aria-hidden="true"></div>
         <span class="spark spark-one" aria-hidden="true">✧</span><span class="spark spark-two" aria-hidden="true">✦</span>
         <button class="hero-photo hero-photo-main photo-open" data-photo="0" aria-label="Open portrait photo 1">
-          <img src="assets/photo-01.jpg" alt="A portrait of my beloved wife, photo 1" fetchpriority="high"><span class="photo-caption">my favorite person</span>
+          <img src="assets/photo-14.jpg" alt="A portrait of my beloved wife, photo 1" fetchpriority="high"><span class="photo-caption"><small>01</small><strong>just being you</strong></span>
         </button>
-        <button class="hero-photo hero-photo-side photo-open" data-photo="1" aria-label="Open portrait photo 2"><img src="assets/photo-02.jpg" alt="A portrait of my beloved wife, photo 2" loading="eager"></button>
-        <button class="hero-photo hero-photo-small photo-open" data-photo="2" aria-label="Open portrait photo 3"><img src="assets/photo-03.jpg" alt="A portrait of my beloved wife, photo 3" loading="eager"><span class="photo-caption dark">my heart, always</span></button>
+        <button class="hero-photo hero-photo-side photo-open" data-photo="1" aria-label="Open portrait photo 2"><img src="assets/photo-15.jpg" alt="A portrait of my beloved wife, photo 2" loading="eager"><span class="photo-caption"><small>02</small><strong>every version of you</strong></span></button>
+        <button class="hero-photo hero-photo-small photo-open" data-photo="2" aria-label="Open portrait photo 3"><img src="assets/photo-16.jpg" alt="A portrait of my beloved wife, photo 3" loading="eager"><span class="photo-caption dark"><small>03</small><strong>My Wify, my always</strong></span></button>
         <div class="hero-seal"><span>♡</span>my heart<br>is yours</div>
       </div>
     </section>
@@ -404,14 +418,15 @@
       ]}
     ];
 
-    const photoFiles=["photo-01.jpg","photo-02.jpg","photo-03.jpg","photo-04.jpg","photo-05.jpg","photo-06.jpg","photo-07.jpg","photo-08.jpg","photo-09.jpg","photo-11.jpg","photo-12.jpg","photo-13.jpg"];
+    const photoFiles=["photo-14.jpg","photo-15.jpg","photo-16.jpg","photo-01.jpg","photo-02.jpg","photo-03.jpg","photo-04.jpg","photo-05.jpg","photo-06.jpg","photo-07.jpg","photo-08.jpg","photo-09.jpg","photo-11.jpg","photo-12.jpg","photo-13.jpg"];
     const photoCaptions=[
+      "just being you","every version of you","My Wify, my always",
       "a face my heart knows by heart","my favorite kind of beautiful","a little piece of my whole heart",
       "the smile I want to remember","my lovely, just as you are","my heart's soft place",
       "the woman I adore","a portrait I could keep looking at","the light that is yours",
       "a moment made more beautiful by you","my beloved, always","my Devi, my love"
     ];
-    const photos=photoFiles.map((file,i)=>({src:"assets/"+file,alt:"A portrait of my beloved wife",caption:photoCaptions[i]}));
+    const photos=photoFiles.map((file,i)=>({src:"assets/"+file,alt:"A portrait of my beloved wife, photo "+(i+1),caption:photoCaptions[i]}));
     const flatReasons = categories.flatMap(c=>c.reasons.map(text=>({category:c.name,text})));
     const grid = document.getElementById("reasonGrid");
     const filters = document.getElementById("filters");
@@ -436,10 +451,10 @@
         const number=document.createElement("span");number.className="reason-number";number.textContent=String(flatReasons.indexOf(reason)+1).padStart(2,"0");
         const text=document.createElement("p");text.textContent=reason.text;
         card.append(number,text);grid.appendChild(card);
-        if(activeFilter==="All"&&((index+1)%10===0)&&imageIndex<photos.length){
+        if(activeFilter==="All"&&((index+1)%9===0)&&imageIndex<photos.length){
           const photo=photos[imageIndex++];
           const figure=document.createElement("figure");figure.className="memory-photo reveal";figure.style.setProperty("--tilt",imageIndex%2?"2deg":"-2deg");
-          figure.innerHTML='<img src="'+photo.src+'" alt="'+photo.alt+'" loading="lazy"><figcaption>'+photo.caption+'</figcaption>';
+          figure.innerHTML='<img src="'+photo.src+'" alt="'+photo.alt+'" loading="lazy"><figcaption><span class="caption-number">'+String(photos.indexOf(photo)+1).padStart(2,"0")+'</span><strong>'+photo.caption+'</strong></figcaption>';
           const photoImg=figure.querySelector("img");photoImg.setAttribute("role","button");photoImg.setAttribute("tabindex","0");photoImg.setAttribute("aria-label","Open photo: "+photo.caption);
           photoImg.addEventListener("click",()=>openLightbox(photos.indexOf(photo)));
           photoImg.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openLightbox(photos.indexOf(photo))}});photoImg.style.cursor="zoom-in";
